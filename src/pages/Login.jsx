@@ -1,13 +1,11 @@
 import { React, useState, useEffect} from 'react';
-import { FaUser } from 'react-icons/fa'
+import { FaSignInAlt } from 'react-icons/fa'
 
 function Login() {
 
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     password: '',
-    password2: '',
   })
 
   const {email, password} = formData;
@@ -27,15 +25,17 @@ function Login() {
     //Do something with form submission
     const onSubmit = (e) => {
       e.preventDefault()
+
+      console.log(formData)
   
     }
   return (
   <>
     <section className='heading'>
     <h1>
-        <FaUser /> Login
+        <FaSignInAlt /> Login
     </h1>
-    <p></p>
+    <p>Start setting goals</p>
     </section>
 
     <section className='form'>
